@@ -6,7 +6,7 @@ services:
 variables:
   # Configure mysql environment variables (https://hub.docker.com/r/_/mysql/)
   MYSQL_DATABASE: terraform_test_db
-  MYSQL_RANDOM_ROOT_PASSWORD: yes
+  MYSQL_RANDOM_ROOT_PASSWORD: "yes"
   MYSQL_USER: terraform_root
   S3_BUCKET_NAME: "springboot-s3-example"
 
