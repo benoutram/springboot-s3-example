@@ -7,10 +7,12 @@ variables:
   # Configure mysql environment variables (https://hub.docker.com/r/_/mysql/)
   MYSQL_DATABASE: terraform_test_db
   MYSQL_ROOT_PASSWORD: password
+  S3_BUCKET_NAME: "springboot-s3-example"
 
 stages:
   - build
   - test
+  - deploy
 
 before_script:
   - export GRADLE_USER_HOME=`pwd`/.gradle
@@ -35,6 +37,12 @@ test:
   stage: test
   script:
     - ./gradlew check
+
+deploy:
+  image: python:latest
+  script:
+  - pip install awscli
+  - aws s3 cp ./ s3://$S3_BUCKET_NAME/ --exclude "*" --include "*.jar"
 
 after_script:
   - echo "End CI"
