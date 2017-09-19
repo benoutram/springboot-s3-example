@@ -1,5 +1,13 @@
 image: java:8-jdk
 
+services:
+  - mysql:latest
+
+variables:
+  # Configure mysql environment variables (https://hub.docker.com/r/_/mysql/)
+  MYSQL_DATABASE: terraform_test_db
+  MYSQL_ROOT_PASSWORD: password
+
 stages:
   - build
   - test
