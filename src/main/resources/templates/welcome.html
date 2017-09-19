@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1 th:text="|Hello ${#authentication.name}|"></h1>
+<form th:action=" @{/logout}" method="post">
+<input type="submit" value="Sign Out"/>
+</form>
+</body>
+</html>
