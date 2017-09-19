@@ -42,7 +42,7 @@ deploy:
   image: python:latest
   script:
   - pip install awscli
-  - aws s3 cp ./ s3://$S3_BUCKET_NAME/ --exclude "*" --include "*.jar"
+  - aws s3 cp build/libs s3://$S3_BUCKET_NAME/ --exclude "*" --include "*.jar"
 
 after_script:
   - echo "End CI"
