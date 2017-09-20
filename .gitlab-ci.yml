@@ -40,7 +40,9 @@ test:
     - ./gradlew check
   artifacts:
     paths:
-      - build/reports/tests/test/
+      - build/reports/
+    expire_in: 1 week
+    when: always
 
 deploy:
   image: python:latest
