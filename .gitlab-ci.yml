@@ -8,7 +8,7 @@ variables:
   MYSQL_DATABASE: terraform_test_db
   MYSQL_RANDOM_ROOT_PASSWORD: "yes"
   MYSQL_USER: terraform_root
-  S3_BUCKET_NAME: "springboot-s3-example"
+  S3_BUCKET_NAME: springboot-s3-example
 
 stages:
   - build
@@ -38,6 +38,9 @@ test:
   stage: test
   script:
     - ./gradlew check
+  artifacts:
+    paths:
+      - build/reports/tests/test/
 
 deploy:
   image: python:latest
