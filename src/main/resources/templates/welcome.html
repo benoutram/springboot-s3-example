@@ -2,12 +2,28 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Welcome</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <th:block th:replace="common :: header"></th:block>
 </head>
 <body>
-<h1 th:text="|Hello ${#authentication.name}|"></h1>
-<form th:action=" @{/logout}" method="post">
-<input type="submit" value="Sign Out"/>
-</form>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Welcome <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <span class="navbar-text authentication-name" th:text="|Hello  ${#authentication.name}|"></span>
+        <form class="form-inline my-2 my-lg-0" th:action=" @{/logout}" method="post">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign out</button>
+        </form>
+    </div>
+</nav>
+
 </body>
 </html>

@@ -2,18 +2,28 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Login</title>
+    <th:block th:replace="common :: header"></th:block>
 </head>
 <body>
-<div th:if="${param.error}">
-    Invalid username and password.
+<div class="container">
+    <form th:action="@{/login}" method="post" class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+
+        <div class="alert alert-danger" role="alert" th:if="${param.error}">
+            Invalid username and password.
+        </div>
+        <div class="alert alert-primary" role="alert" th:if="${param.logout}">
+            You have been logged out.
+        </div>
+
+        <label class="sr-only">User Name</label>
+        <input type="email" name="username" class="form-control" placeholder="Email address" required="required"/>
+
+        <label class="sr-only">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="Password" required="required"/>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
 </div>
-<div th:if="${param.logout}">
-    You have been logged out.
-</div>
-<form th:action="@{/login}" method="post">
-    <div><label> User Name : <input type="text" name="username"/> </label></div>
-    <div><label> Password: <input type="password" name="password"/> </label></div>
-    <div><input type="submit" value="Sign In"/></div>
-</form>
 </body>
 </html>
