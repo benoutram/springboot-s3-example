@@ -44,6 +44,8 @@ test:
       - build/reports/
     expire_in: 1 week
     when: always
+  only:
+    - master
 
 deploy:
   image: python:latest
