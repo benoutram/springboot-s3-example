@@ -9,7 +9,6 @@ variables:
   MYSQL_RANDOM_ROOT_PASSWORD: "yes"
   MYSQL_USER: terraform
   MYSQL_PASSWORD: $MYSQL_PASSWORD
-  S3_BUCKET_NAME: springboot-s3-example-2
 
 stages:
   - build
