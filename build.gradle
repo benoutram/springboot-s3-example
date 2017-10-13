@@ -37,6 +37,10 @@ dependencies {
     runtime('mysql:mysql-connector-java')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile("org.springframework.security:spring-security-test")
+
+    // MariaDB4j
+    testCompile('ch.vorburger.mariaDB4j:mariaDB4j:2.2.3')
+    testRuntime('org.mariadb.jdbc:mariadb-java-client:2.1.2')
 }
 
 def profile = (project.hasProperty('profile') ? project.profile : 'local')
