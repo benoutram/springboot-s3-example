@@ -51,7 +51,7 @@ deploy:
   image: python:latest
   script:
   - pip install awscli
-  - aws s3 cp build/libs s3://springboot-s3-example-2/ --recursive --exclude "*" --include "*.jar"
+  - aws s3 cp build/libs s3://springboot-s3-example/ --recursive --exclude "*" --include "*.jar"
   only:
   - master
 
