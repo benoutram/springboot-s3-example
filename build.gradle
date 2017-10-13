@@ -46,6 +46,10 @@ dockerCompose {
     removeContainers = false
 }
 
+springBoot {
+    executable = true
+}
+
 bootRun {
     addResources = true
     systemProperties = [
