@@ -2,7 +2,6 @@ package springboot.example.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class WelcomeController {
@@ -12,7 +11,7 @@ public class WelcomeController {
         return "login";
     }
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public String welcome() {
         return "welcome";
     }
