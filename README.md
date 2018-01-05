@@ -1,4 +1,16 @@
-# README #
+# Spring Boot S3 Example #
+
+[![pipeline status](https://gitlab.com/benoutram/springboot-s3-example/badges/master/pipeline.svg)](https://gitlab.com/benoutram/springboot-s3-example/commits/master)
+
+[![GitHub issues](https://img.shields.io/github/issues/benoutram/springboot-s3-example.svg)](https://github.com/benoutram/springboot-s3-example/issues)
+
+[![GitHub forks](https://img.shields.io/github/forks/benoutram/springboot-s3-example.svg)](https://github.com/benoutram/springboot-s3-example/network)
+
+[![GitHub stars](https://img.shields.io/github/stars/benoutram/springboot-s3-example.svg)](https://github.com/benoutram/springboot-s3-example/stargazers)
+
+[![GitHub license](https://img.shields.io/github/license/benoutram/springboot-s3-example.svg)](https://github.com/benoutram/springboot-s3-example/blob/master/LICENSE)
+
+[![Twitter Follow](https://img.shields.io/twitter/follow/benoutram.svg?style=social&label=Follow)]()
 
 ## What is this repository for? ##
 
