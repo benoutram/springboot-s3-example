@@ -10,7 +10,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/benoutram/springboot-s3-example.svg)](https://github.com/benoutram/springboot-s3-example/blob/master/LICENSE)
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/benoutram.svg?style=social&label=Follow)]()
+[![Twitter Follow](https://img.shields.io/twitter/follow/benoutram.svg?style=social&label=Follow)](https://twitter.com/intent/follow?screen_name=benoutram)
 
 ## What is this repository for? ##
 
