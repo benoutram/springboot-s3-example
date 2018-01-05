@@ -2,8 +2,7 @@
 
 ## What is this repository for? ##
 
-This is an example web application which is a dependency of the [Terraform AWS VPC Example](https://github
-.com/benoutram/terraform-aws-vpc-example) project. It's used to help visually demonstrate the successful deployment of 
+This is an example web application which is a dependency of the [Terraform AWS VPC Example](https://github.com/benoutram/terraform-aws-vpc-example) project. It's used to help visually demonstrate the successful deployment of 
 infrastructure and software.
 
 The [Terraform AWS VPC Example](https://github.com/benoutram/terraform-aws-vpc-example) project expects the built 
