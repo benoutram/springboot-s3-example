@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-light navbar-expand-md fixed-top">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -18,12 +18,15 @@
                 <a class="nav-link" href="#">Welcome <span class="sr-only">(current)</span></a>
             </li>
         </ul>
-        <span class="navbar-text authentication-name" th:text="|Hello  ${#authentication.name}|"></span>
+        <span class="navbar-text authentication-name" th:text="|Hello  ${#authentication.principal.name}|"></span>
         <form class="form-inline my-2 my-lg-0" th:action=" @{/logout}" method="post">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign out</button>
+            <button class="btn my-2 my-sm-0" type="submit">Sign out</button>
         </form>
     </div>
 </nav>
+
+<main role="main" class="container">
+</main>
 
 </body>
 </html>

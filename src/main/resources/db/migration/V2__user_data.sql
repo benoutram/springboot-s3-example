@@ -21,7 +21,7 @@
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT  IGNORE INTO `user` (`id`, `email`, `name`, `password`) VALUES (1,'john@smith.com','John Smith','password');
+INSERT  IGNORE INTO `user` (`id`, `email`, `name`, `password`) VALUES (1,'john@smith.com','John Smith','$2a$10$xnCxvpx3B4jjzBVLshCwmuC.FRomkd0BUA8UvFDALWmpLbYt1dzYm');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

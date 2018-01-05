@@ -1,7 +1,9 @@
 body {
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #eee;
+    background-color: #ffc900;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
 }
 .form-signin {
     max-width: 330px;
@@ -10,6 +12,11 @@ body {
 }
 .form-signin .form-signin-heading {
     margin-bottom: 10px;
+    font-family: 'Montserrat', serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2.5rem;
+    color: #ff405d;
 }
 .form-signin .form-control {
     position: relative;
@@ -17,10 +24,19 @@ body {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 10px;
-    font-size: 16px;
+    background-color: inherit;
 }
 .form-signin .form-control:focus {
     z-index: 2;
+}
+.form-signin .form-control::-moz-placeholder {
+    color: #323232;
+}
+.form-signin .form-control:-ms-input-placeholder {
+    color: #323232;
+}
+.form-signin .form-control::-webkit-input-placeholder {
+    color: #323232;
 }
 .form-signin input[type="email"] {
     margin-bottom: -1px;
@@ -34,4 +50,20 @@ body {
 }
 .authentication-name {
     padding: 0rem 1.5rem 0rem 0rem;
+}
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:focus, .btn-primary:active:focus {
+    background-color: #ff405d;
+    border-color: #ff405d;
+}
+.navbar {
+    background-color: #ff405d;
+}
+.navbar-nav .nav-link {
+    font-family: 'Montserrat', serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #ff405d;
+}
+.navbar-text {
+    color: rgba(0,0,0,.9) !important;
 }
