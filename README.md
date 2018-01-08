@@ -21,7 +21,11 @@ The [Terraform AWS VPC Example](https://github.com/benoutram/terraform-aws-vpc-e
 Spring Boot artifact to reside in Amazon S3 storage which is then fetched during provisioning of web server 
 instances and set up to run as a service.
 
-The project has a database dependency to demonstrate database connectivity.
+The project has a database dependency to demonstrate database connectivity. There is one sample user in the database:
+
+| Username       | Password |
+| -------------- | ---------|
+| john@smith.com | password |
 
 ## Dependencies ##
 
