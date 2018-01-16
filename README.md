@@ -36,9 +36,9 @@ Read more about getting started with GitLab CI/CD  [here](https://docs.gitlab.co
 
 The configuration depends on the following secret variables which need to be configured in GitLab CI / CD Settings:
 
-- AWS_ACCESS_KEY_ID
-- AWS_SECRET_ACCESS_KEY
-- SPRING_DATASOURCE_PASSWORD
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
+- `SPRING_DATASOURCE_PASSWORD`
 
 The AWS CLI expects the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` to be populated with the Access Key ID and Secret Access Key of an AWS IAM user that has programmatic access enabled.
 
