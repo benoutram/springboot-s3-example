@@ -14,8 +14,7 @@
 
 ## What is this repository for? ##
 
-This is an example web application which is a dependency of the [Terraform AWS VPC Example](https://github.com/benoutram/terraform-aws-vpc-example) project. It's used to help visually demonstrate the successful deployment of 
-infrastructure and software.
+This is an example web application which is a dependency of the [Terraform AWS VPC Example](https://github.com/benoutram/terraform-aws-vpc-example) project. It's used to help visually demonstrate the successful deployment of infrastructure and software. It has a [GitLab](https://gitlab.com) `.gitlab-ci.yml` CI configuration file which can be used to build the project and copying it to Amazon S3 storage.
 
 The [Terraform AWS VPC Example](https://github.com/benoutram/terraform-aws-vpc-example) project expects the built 
 Spring Boot artifact to reside in Amazon S3 storage which is then fetched during provisioning of web server 
@@ -26,6 +25,44 @@ The project has a database dependency to demonstrate database connectivity. Ther
 | Username       | Password |
 | -------------- | ---------|
 | john@smith.com | password |
+
+## Deployment to S3 ##
+
+The [GitLab](https://gitlab.com) `.gitlab-ci.yml` CI configuration file can be used to build the project and copy it to a S3 bucket.
+
+The file uses the `cp` command of the [AWS CLI](http://docs.aws.amazon.com/cli/latest/reference/s3/cp.html) to copy the file.
+
+Read more about getting started with GitLab CI/CD  [here](https://docs.gitlab.com/ee/ci/).
+
+The configuration depends on the following secret variables which need to be configured in GitLab CI / CD Settings:
+
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+- SPRING_DATASOURCE_PASSWORD
+
+The AWS CLI expects the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` to be populated with the Access Key ID and Secret Access Key of an AWS IAM user that has programmatic access enabled.
+
+Configure the IAM user with a policy to allow copying files to the S3 bucket. In this example policy file the bucket name is `springboot-s3-example`. Replace this with your bucket name.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "s3:PutObject",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": [
+                "arn:aws:s3:::springboot-s3-example/*"
+            ],
+            "Effect": "Allow"
+        }
+    ]
+}
+```
+
+`SPRING_DATASOURCE_PASSWORD` is required during the testing stage. It should be a random password that will be the MySQL password for the Terraform user account used by the web application.
 
 ## Dependencies ##
 

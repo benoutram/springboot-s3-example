@@ -8,7 +8,7 @@ variables:
   MYSQL_DATABASE: terraform_test_db
   MYSQL_RANDOM_ROOT_PASSWORD: "yes"
   MYSQL_USER: terraform
-  MYSQL_PASSWORD: $MYSQL_PASSWORD
+  MYSQL_PASSWORD: $SPRING_DATASOURCE_PASSWORD
 
 stages:
   - build
